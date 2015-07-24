@@ -28,14 +28,17 @@ registerProblem('Review JavaScript',
 
         // String
         s1 = "String Value";
-        var s2 = 'String Value';
+        var s2 = 'String " \' Value';
 
         // Object and JSON
         var o1 = new Object();
         o2 = Object();
         o3 = {};
         o4 = { name: 'Ngoc', role: 'Lecture' };
-        o5 = { 'name': 'Thinh', 'role': 'Student' };
+        o5 = { 'na   me': 'Thinh', 'role': 'Student' };
+
+        o1.AAAA = "THINK";
+        o1['AAAA'] = "PANADOL";
 
         // Array
         array = new Array();
@@ -45,7 +48,7 @@ registerProblem('Review JavaScript',
             array[i] = i;
         }
         for (i = 0; i < 1000; i++) {
-            a3.push();
+            a3.push(i);
         }
 
         // Date
@@ -75,8 +78,12 @@ registerProblem('Review JavaScript',
 
         // Object Oriented Programming
 
+        // HTML DOM  & CSS
+
         // JQuery
 
         // Bootstrap
+
+        // Tools: http://jsbeautifier.org/, http://ideone.com/, http://codeforces.com/problemset/customtest
     }
 );
