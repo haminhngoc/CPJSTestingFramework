@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -21,9 +21,13 @@
         <tbody></tbody>
     </table>
 
+    <hr style="margin: 20px;" />
+    <h1>Custom Test</h1>
+    <textarea id="Testcase" rows="10" style="width:98%; display:block; margin: 10px;"></textarea>
+    <input type="button" id="Test" value="Submit" />
+
     <script type="text/javascript" src="jquery-2.1.4.js"></script>
     <script type="text/javascript" src="Runtime.js"></script>
-
 
     <!-- Add Your Problems Here -->
     <script type="text/javascript" src="Problems/ReviewJavaScriptJul23.js"></script>
@@ -31,9 +35,32 @@
     <script type="text/javascript" src="Problems/558BAmrandTheLargeArray.js"></script>
     <script type="text/javascript" src="Problems/558BAmrandTheLargeArray2.js"></script>
     <script type="text/javascript" src="Problems/558BAmrandTheLargeArray3.js"></script>
+    <script type="text/javascript" src="Problems/2014WPFKharkivA-AHardWay.js"></script>
+    <script type="text/javascript" src="Problems/2014WPFKharkivB-ACoincidence.js"></script>
+    <script type="text/javascript" src="Problems/2014WPFKharkivD-AFishLunch.js"></script>
+    <script type="text/javascript" src="Problems/2014WPFKharkivE-TheSecretCode.js"></script>
+    <!--<script type="text/javascript" src="Problems/2014WPFKharkivC-AFullSet.js"></script>
+    <script type="text/javascript" src="Problems/2014WPFKharkivG-APathToKnowledge.js"></script>-->
     <!--
         registerProblem(id, testcases, mainFunction);
         testcases: [{input:'', output: ''}];
     -->
+    <script type="text/javascript">
+        $(function () {
+            $("#Test").click(function () {
+                var currentProb = getCurrentProblem();
+                if (currentProb) {
+                    runProblem({ input: $('#Testcase').val(), output: '' }, currentProb.func);
+                }
+            });
+
+            window.setTimeout(function () {
+                var lastValue = $('#SelectProblem option:last-child').attr('value');
+                $('#SelectProblem').val(lastValue);
+                $('#SelectProblem').change();
+                //var lastValue = $('#SelectProblem option:last-child').click();
+            }, 500);
+        });
+    </script>
 </body>
 </html>

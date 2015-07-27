@@ -39,7 +39,7 @@ registerProblem('558B Amr and The Large Array - Dictionary',
             }
 
             this.toString = function () {
-                return '(' + this.position + ', ' + this.count + ')';
+                return '(' + this.count + ': ' + this.minPosition + ' - ' + this.maxPosition + ')';
             };
 
             this.setPosition(position);
