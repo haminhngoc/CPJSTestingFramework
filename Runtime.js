@@ -14,6 +14,10 @@ function print(s) {
     currentResult += s + '\n';
 }
 
+function randBetween(l, u) {
+    return Math.floor(Math.random() * (u - l));
+}
+
 function addRuntimeRow() {
     var no = $('#Runtime tbody tr').length + 1;
     return $('<tr><td>' + no + '</td><td></td><td></td></tr>').appendTo('#Runtime tbody');
