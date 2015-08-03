@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="jquery-2.1.4.js" />
+    <Content Include="Problems\2014WPFKharkivF-DuraLex.js" />
     <Content Include="Problems\2014WPFKharkivG-APathToKnowledge.js" />
     <Content Include="Problems\2014WPFKharkivC-AFullSet.js" />
     <Content Include="Problems\2014WPFKharkivE-TheSecretCode.js" />
